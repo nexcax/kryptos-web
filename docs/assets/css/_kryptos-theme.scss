@@ -1,0 +1,84 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$kryptos-blue: (
+    50 : #e0e0fb,
+    100 : #b3b3f5,
+    200 : #8080ee,
+    300 : #4d4de7,
+    400 : #2626e1,
+    500 : #0000dc,
+    600 : #0000d8,
+    700 : #0000d3,
+    800 : #0000ce,
+    900 : #0000c5,
+    A100 : #ededff,
+    A200 : #babaff,
+    A400 : #8787ff,
+    A700 : #6e6eff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+$kryptos-accent: (
+  50: #e0faff,
+  100: #b3f2ff,
+  200: #80e9ff,
+  300: #4de0ff,
+  400: #26d9ff,
+  500: #00d2ff,
+  600: #00cdff,
+  700: #00c7ff,
+  800: #00c1ff,
+  900: #00b6ff,
+  A100: #ffffff,
+  A200: #f2fbff,
+  A400: #bfeaff,
+  A700: #a6e2ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$kryptos-app-primary: mat-palette($kryptos-blue, 500);
+$kryptos-app-accent: mat-palette($kryptos-accent, 500);
+$kryptos-app-warn: mat-palette($mat-red);
+
+$kryptos-app-theme: mat-light-theme(
+  $kryptos-app-primary,
+  $kryptos-app-accent,
+  $kryptos-app-warn
+);
+
+@include angular-material-theme($kryptos-app-theme);
+
+.color-blue {
+  color: mat-color($kryptos-app-primary, default);
+}
