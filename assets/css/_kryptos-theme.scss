@@ -82,3 +82,10 @@ $kryptos-app-theme: mat-light-theme(
 .color-blue {
   color: mat-color($kryptos-app-primary, default);
 }
+.color-white {
+  color: white;
+}
+
+.bg-blue {
+  background-color: mat-color($kryptos-app-primary, default);
+}
